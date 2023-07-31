@@ -1,0 +1,116 @@
+.container {
+    width: 100%;
+    padding: 16px;
+  
+    .header {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+  
+      .search {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+  
+        input {
+          width: 300px;
+          padding: 8px 4px;
+          background-color: black;
+          border: 1px solid white;
+          border-right: none;
+          border-radius: 6px;
+          border-bottom-right-radius: 0;
+          border-top-right-radius: 0;
+          font-size: 16px;
+  
+          &::placeholder {
+            color: white;
+          }
+        }
+  
+        .button {
+          border: 1px solid white;
+          border-left: 0;
+          border-bottom-right-radius: 6px;
+          border-top-right-radius: 6px;
+          padding: 7.5px;
+          cursor: pointer;
+          background-color: black;
+        }
+  
+      }
+    }
+  
+    .content {
+      display: grid;
+      max-width: 100%;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      min-height: 0;
+      /* NEW */
+      min-width: 0;
+  
+      .card {
+        max-width: 100%;
+        overflow: hidden;
+        min-width: 0;
+        margin: 8px;
+        padding: 8px;
+  
+        &:hover {
+          background-color: white;
+          color: black;
+  
+          svg {
+            path {
+              fill: black;
+            }
+          }
+        }
+  
+        img {
+          width: 100%;
+          height: 300px;
+          object-fit: cover;
+        }
+  
+        .text {
+          padding: 8px 0px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          font-size: 22px;
+        }
+      }
+    }
+  
+    .more {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      padding: 8px 0px;
+  
+      a {
+        font-size: 16px;
+  
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .container {
+      .content {
+        grid-template-columns: 1fr;
+  
+        .card {
+          padding: 0;
+          margin: 8px 0px;
+        }
+      }
+    }
+  }
+  
