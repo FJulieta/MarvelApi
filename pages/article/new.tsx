@@ -1,4 +1,4 @@
-import css from 'styles/ArticleNew.module.css'
+import css from 'styles/ArticleNew.module.scss'
 
 const NewArticlePage = () => {
   return (
